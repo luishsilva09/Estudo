@@ -29,4 +29,3 @@ function castelos(terras) {
 }
 
 console.log(castelos(terras));
-//21 97691 7564
