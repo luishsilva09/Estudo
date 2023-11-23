@@ -8,12 +8,15 @@ function caixa(valorSaque) {
     if (quantNota > 0) {
       res.push(
         quantNota +
-          `${quantNota == 1 ? " nota" : "notas"} de R$` +
+          `${quantNota == 1 ? " nota" : " notas"} de R$` +
           nota.toFixed(2).replace(".", ",")
       );
     }
   }
+  if (valorSaque > 0) {
+    return `Erro: Não possuimos cédula de R$ ${valorSaque.toFixed(2)}`;
+  }
   return res.join(" e ");
 }
 
-console.log(caixa(80));
+console.log(caixa(1000));
